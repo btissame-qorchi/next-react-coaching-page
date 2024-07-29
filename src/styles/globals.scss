@@ -1,0 +1,326 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}
+.container{
+   padding: 0 25px;
+}
+
+/* Header css */
+
+header{
+  border-bottom: 1px solid rgba(255,255,255,.1);
+nav{
+  li{
+  a{
+    &::after{
+      content: " ";
+      position: absolute;
+      background-color: rgba(255,255,255,.5);
+      font-size: 10px;
+      border-radius: 50%;
+      height: 5px;
+      width: 5px;
+          right: -25px;
+    top: 7px;
+    }
+  
+  }
+   &:last-child{
+     a{
+       &::after{
+        content: none;
+      }
+     }
+    }
+   
+  }
+}
+a:not(.logo){
+        transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover{
+      opacity: .8;
+    }
+}
+}
+/* End Header css */
+
+/* Hero css */
+
+ .wrapper-hero{
+  >div{
+        background: linear-gradient(to bottom, #000,#0c0c0c);
+
+  }
+}
+.slick-list, .slick-track,.slick-slider {
+  height: 100%;
+}
+
+.slick-item{
+    height: 100%;
+  .container{
+  
+    display: flex !important;
+  }
+}
+
+.wrapper-content{
+  .title-slide{
+    h2{
+      color: #2E8B57;
+    }
+  }
+  .btn-more{
+    a{
+      font-size: 14px;
+    }
+  }
+}
+.slick-dots{
+  bottom: 15px !important;
+  li{
+    margin: 0 !important;
+    button{
+      &::before{
+        width: 8px !important;
+        height:8px !important;
+        font-size: 0 !important;
+            border: 1px solid white;
+    border-radius: 50%; 
+      }
+    }
+    &.slick-active{
+      button{
+        &::before{
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+/* End Hero css */
+
+/* About css*/
+.wrapper-about{
+  .left{
+    .inner{
+      max-width: 80%;
+    }
+  }
+  .right{
+    .item{
+      max-width: 80%;
+      p{
+        border-bottom: 1px solid rgba(255,255,255,.1);
+      }
+       &:last-child{
+         p{
+           border-bottom: 0;
+         }
+        }
+    }
+  }
+
+}
+/* End About css*/
+
+/* Services css*/
+.wrapper-service{
+  .items{
+    .img{
+      img{
+        width: 100%;
+      }
+    }
+    .description{
+      background-color: #0c0c0c;
+    }
+  }
+}
+
+/* End Services css*/
+
+/* Teams css*/
+.wrapper-teams{
+  .description{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* End Teams css*/
+
+/* Testimonials css*/
+.wrapper-testimonials{
+.slick-dots{
+  position: static;
+      margin-top: 40px;
+}
+}
+
+/* End Testimonials css*/
+
+
+/* Contact css*/
+.wrapper-contact{
+  .left{
+background-color: #0c0c0c;
+  }
+  input,textarea{
+    border: 1px solid white;
+    background: transparent;
+    padding: 10px;
+    color: white;
+    font-size: 13px;
+  }
+}
+
+/* End Contact css*/
+
+/* Footer css*/
+
+footer{
+background-color: #0c0c0c;
+.top{
+  border-bottom: 1px solid rgba(255,255,255,.3);
+}
+}
+/* End Footer css*/
+
+
+/* Legal page css*/
+.wrapper-page-legal{
+  p{
+    padding-bottom: 15px;
+  }
+}
+/* End Legal page  css*/
+
+
+.wrapper-404{
+  h1{
+    font-size: 230px;
+  }
+  .text{
+    a{
+      border:1px solid white
+    }
+  }
+  +footer{
+    .social{
+      a{
+        display: inline-block;
+        width: 16px;
+      }
+    }
+  }
+}
+
+/* Responsive */
+
+/*services*/
+
+@media screen and (max-width: 1440px){
+.container{
+  
+}
+}
+@media screen and (max-width: 1280px){
+
+  .container{
+    max-width: 100%;
+ 
+  }
+
+}
+
+@media screen and (max-width: 1024px){
+.wrapper-about{
+  .left{
+    .inner{
+      max-width: 100%;
+    }
+  }
+}
+body{
+  &.menu-open{
+    overflow: hidden;
+  }
+}
+ .hideMenuNav {
+        display: none;
+      }
+      .showMenuNav {
+        display: block;
+        position: absolute;
+        width: 100%;
+        padding-top: 150px;
+        top: 0;
+        left: 0;
+        background: #000;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:after{
+        content: "";
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        position: absolute;
+        top: 104px;
+        width: 100%;
+        }
+        .menu{
+          padding-top: 80px;
+        li{
+              text-align: center;
+          border-bottom: 1px solid rgba(255,255,255,.2);
+        }
+          ul{
+                    border-top: 1px solid rgba(255,255,255,.2);
+
+        }
+        }
+          
+      
+      }
+}
+@media screen and (max-width: 992px){
+  header{
+     nav{
+      li{
+        a{
+          &::after{
+            right: -22px;
+          }
+        }
+      }
+     }
+  }
+  .wrapper-contact{
+    padding: 0 25px;
+  }
+  footer{
+    padding: 0 25px;
+  }
+  
+}
+
+@media screen and (max-width: 768px){
+.slick-dots {
+    bottom: -28px !important;
+}
+.hamburger-icon{
+  top:54px;
+}
+
+}
+
+
