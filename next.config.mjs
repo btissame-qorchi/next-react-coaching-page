@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   distDir: "build",
-  assetPrefix: "/next-react-coaching-page/",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
