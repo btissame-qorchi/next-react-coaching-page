@@ -30,7 +30,9 @@ function Header() {
           <span className="block h-0.5 w-8  bg-white"></span>
           <span className="block h-0.5 w-8  bg-white"></span>
         </div>
-        <div className={isNavOpen ? "showMenuNav h-screen  px-6" : "hideMenuNav"}>
+        <div
+          className={isNavOpen ? "showMenuNav h-screen  px-6" : "hideMenuNav"}
+        >
           <div
             className="absolute  top-1.5 -right-1 px-5 py-7"
             onClick={() => setIsNavOpen(false)}
@@ -83,7 +85,11 @@ function Header() {
         {/** Logo */}
         <div className="relative">
           <Link className="logo relative z-10" href="/">
-            <img className="w-20" src="/images/logo4.png" alt="logo" />
+            <img
+              className="w-20"
+              src="${basePath}/images/logo4.png"
+              alt="logo"
+            />
           </Link>
         </div>
         {/** Navigation */}
