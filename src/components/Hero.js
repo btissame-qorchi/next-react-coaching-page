@@ -5,8 +5,11 @@ import sliderHeroData from "@/data/sliderHeroData";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useBasePath } from "../context/BasePathContext";
 
 function Hero() {
+  const basePath = useBasePath();
+
   const heroSliderSettings = {
     dots: true,
     infinite: true,
@@ -54,7 +57,7 @@ function Hero() {
                   </div>
                 </div>
                 <div className="lg:max-w-lg sm:max-w-80 mt-16 md:mt-0  relative mx-auto md:max-w-96 image md:absolute bottom-0 right-0">
-                  <img src={slide.image} alt="" />
+                  <img src={`${basePath}${slide.image}`} alt="" />
                 </div>
               </div>
             ))}

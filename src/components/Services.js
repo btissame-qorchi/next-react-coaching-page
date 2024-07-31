@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import servicesData from "@/data/servicesData";
 import ServicePopup from "./ServicePopup";
+import { useBasePath } from "../context/BasePathContext";
 
 function Services() {
   const [selectedService, setSelectedService] = useState(null);
@@ -12,6 +13,7 @@ function Services() {
   const closePopup = () => {
     setSelectedService(null);
   };
+  const basePath = useBasePath();
 
   return (
     <div className="wrapper-service bg-black pb-16 pt-24 lg:pb-30 lg:pt-32">
@@ -39,7 +41,7 @@ function Services() {
             >
               <div className="img overflow-hidden">
                 <img
-                  src={service.image}
+                  src={`${basePath}/service.image`}
                   className="transition-transform hover:scale-110 duration-300"
                   alt=""
                 />

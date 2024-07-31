@@ -1,10 +1,12 @@
 import React from "react";
+import { useBasePath } from "../context/BasePathContext";
 
 function MeetTeams() {
+  const basePath = useBasePath();
   return (
     <div className="wrapper-meet-teams flex-wrap flex">
       <div className="left sm:w-1/2">
-        <img src="/images/t1.jpg" alt="" />
+        <img src={`${basePath}/images/t1.jpg`} alt="" />
       </div>
       <div className="right sm:w-1/2 bg-primary h-60 sm:h-auto">
         <div className="inner flex justify-center items-center h-full">

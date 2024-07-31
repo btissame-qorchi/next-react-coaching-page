@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useBasePath } from "../context/BasePathContext";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,8 @@ function Contact() {
       [name]: value,
     }));
   };
+
+  const basePath = useBasePath();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -104,7 +107,7 @@ function Contact() {
         </div>
       </div>
       <div className="right w-full hidden lg:block lg:w-1/2">
-        <img src="/bg/bg3.jpg" className="" alt="" />
+        <img src={`${basePath}/bg/bg3.jpg`} className="" alt="" />
       </div>
     </div>
   );

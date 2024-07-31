@@ -1,8 +1,10 @@
 import React from "react";
 import teamsData from "@/data/teamsData";
 import SocialLinks from "./SocialLinks";
+import { useBasePath } from "../context/BasePathContext";
 
 function Teams() {
+  const basePath = useBasePath();
   return (
     <div className="wrapper-teams py-24 lg:py-32">
       <div className="container  mx-auto">
@@ -24,7 +26,7 @@ function Teams() {
           {teamsData.map((item) => (
             <div key={item.name} className="item w-full sm:w-1/2 md:w-1/4 p-5">
               <div className="img overflow-hidden">
-                <img src={item.photo} alt="" />
+                <img src={`${basePath}${item.photo}`} alt="" />
               </div>
               <div className="description mt-7 pb-4">
                 <h6 className="text-primary text-center font-bold text-xs  uppercase">

@@ -6,13 +6,16 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import { useBasePath } from "../context/BasePathContext";
 
 function Footer() {
+  const basePath = useBasePath();
+
   return (
     <footer className="flex flex-wrap">
       <div className="wrapper-footer w-full md:w-11/12 xl:w-7/12 mx-auto  pt-20">
         <div className="logo mb-14">
-          <img className="w-20" src="images/logo4.png" alt="" />
+          <img className="w-20" src={`${basePath}/images/logo4.png`} alt="" />
         </div>
         <div className="top pb-16 flex flex-wrap">
           <div className="w-full mb-10 sm:mb-0 sm:w-5/12 ">
