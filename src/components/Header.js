@@ -4,9 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import menuItems from "@/data/menuItems";
 import Link from "next/link";
+import { useBasePath } from "../context/BasePathContext";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const basePath = useBasePath();
 
   useEffect(() => {
     if (isNavOpen) {

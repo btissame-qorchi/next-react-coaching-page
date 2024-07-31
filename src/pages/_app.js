@@ -8,6 +8,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { BasePathProvider } from "../context/BasePathContext";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 
 //Import font awesome
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -34,9 +37,11 @@ library.add(
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <BasePathProvider>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </BasePathProvider>
     </div>
   );
 }
